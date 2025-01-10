@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   pdf-converter:
-    build: 
+    build:
       context: .
       dockerfile: Dockerfile
     ports:
@@ -12,9 +12,8 @@ services:
     environment:
       - STREAMLIT_SERVER_PORT=8501
       - STREAMLIT_SERVER_ADDRESS=0.0.0.0
-    # Add resource limits
     deploy:
       resources:
         limits:
-          cpus: '2'
-          memory: 2G
+          cpus: '1'
+          memory: 1G
